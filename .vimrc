@@ -12,7 +12,9 @@
 if &compatible
   set nocompatible
 endif
+
 filetype plugin on
+filetype indent on
 
 set backspace=indent,eol,start
 set ruler
@@ -21,6 +23,8 @@ set suffixes-=.h
 set suffixes-=.obj
 set nu
 syntax on
+set encoding=utf-8
+set clipboard=unnamedplus
 
 " Move temporary files to a secure location to protect against CVE-2017-1000382
 if exists('$XDG_CACHE_HOME')
