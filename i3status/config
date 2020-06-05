@@ -33,7 +33,20 @@ ethernet _first_ {
 }
 
 battery all {
-        format = "%status %percentage %remaining"
+format = "%status %percentage %remaining"
+    format_down = ""
+    last_full_capacity = true
+    integer_battery_capacity = true
+    low_threshold = 11
+    threshold_type = percentage
+    hide_seconds = true
+    status_chr = " "
+    status_bat = " "
+    status_unk = " "
+    status_full = " "
+        #last_full_capacity = true
+        #format = "%status %percentage %remaining"
+        #path = "/sys/class/power_supply/BAT0/uevent"
 }
 
 disk "/" {
@@ -57,7 +70,7 @@ tztime local {
 # WORKING on dell inspiron 15 7000
 # Get the card info from command: pactl list sinks (get it RUNNING)
 volume master {
-        format = "♪: %volume"
-        format_muted = "♪: muted (%volume)"
+        format = "  %volume"
+        format_muted = ": muted (%volume)"
         device = "pulse:alsa_output.pci-0000_00_1f.3.analog-stereo"
 }
