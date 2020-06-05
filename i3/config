@@ -37,10 +37,11 @@ exec --no-startup-id nm-applet
 #bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 #bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
+# Use pactl to adjust volume in PulseAudio. WORKING on dell Inspiron 15 7000
 set $sink `pactl list short sinks | grep RUNNING | cut -f1`
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume $sink  +10%
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume $sink  -10%
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute $sink toggle
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume $sink  +10% && killall -SIGUSR1 i3status
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume $sink  -10% && killall -SIGUSR1 i3status
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute $sink toggle && killall -SIGUSR1 i3status
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
