@@ -43,41 +43,41 @@ scrollback_lines = 10000
 [colors]
 
 # special
-foreground      = #cccccc
-foreground_bold = #cccccc
-cursor          = #cccccc
-background      = #333333
+foreground      = #c5c8c6
+foreground_bold = #c5c8c6
+cursor          = #c5c8c6
+background      = #1d1f21
 
 # black
-color0  = #666666
-color8  = #999999
+color0  = #1d1f21
+color8  = #969896
 
 # red
-color1  = #cc6699
-color9  = #ff99cc
+color1  = #cc6666
+color9  = #cc6666
 
 # green
-color2  = #99cc66
-color10 = #ccff99
+color2  = #b5bd68
+color10 = #b5bd68
 
 # yellow
-color3  = #cc9966
-color11 = #ffcc99
+color3  = #f0c674
+color11 = #f0c674
 
 # blue
-color4  = #6699cc
-color12 = #99ccff
+color4  = #81a2be
+color12 = #81a2be
 
 # magenta
-color5  = #9966cc
-color13 = #cc99ff
+color5  = #b294bb
+color13 = #b294bb
 
 # cyan
-color6  = #66cc99
-color14 = #99ffcc
+color6  = #8abeb7
+color14 = #8abeb7
 
 # white
-color7  = #cccccc
+color7  = #c5c8c6
 color15 = #ffffff
 
 [hints]
