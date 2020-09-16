@@ -191,6 +191,9 @@ bar {
 #configure keyboard
 exec setxkbmap -model abnt2 -layout br -variant abnt2
 
+#consfigure X background color
+exec --no-startup-id xsetroot -solid "#3B4252"
+
 #bindsym $mod+Tab workspace next_on_output 
 #bindsym $mod+Shift+Tab workspace prev_on_output 
 # PageUp & PageDown select workspace prev and next
@@ -206,6 +209,7 @@ bindsym XF86MonBrightnessDown exec "xbacklight -dec 10; notify-send 'brightness 
 for_window [class=".*"] border pixel 2
 gaps inner 8 
 gaps outer 4
+
 
 
 # class                 border  backgr. text    indicator child_border
