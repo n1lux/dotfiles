@@ -217,7 +217,7 @@ bindsym XF86MonBrightnessUp exec xrandr --output eDP-1 --brightness $(echo "$(xr
 
 bindsym XF86MonBrightnessDown exec xrandr --output eDP-1 --brightness $(echo "$(xrandr --verbose |grep Brightness |grep -o '[0-9].*')-0.1" | bc)
 # You can also use any non-zero value if you'd like to have a border
-for_window [class=".*"] border pixel 2
+for_window [class=".*"] border pixel 4
 gaps inner 8 
 gaps outer 2 
 
