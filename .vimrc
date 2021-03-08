@@ -23,8 +23,9 @@ set suffixes-=.h
 set suffixes-=.obj
 set nu
 syntax on
-set encoding=utf-8
 set clipboard=unnamedplus
+set encoding=utf-8  " The encoding displayed.
+set fileencoding=utf-8  " The encoding written to file.
 
 " Move temporary files to a secure location to protect against CVE-2017-1000382
 if exists('$XDG_CACHE_HOME')
