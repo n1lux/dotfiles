@@ -15,6 +15,7 @@ endif
 
 filetype plugin on
 filetype indent on
+set background=dark
 
 set backspace=indent,eol,start
 set ruler
