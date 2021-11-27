@@ -67,6 +67,11 @@ bindsym $mod+p exec $rofi
 # installed.
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
+# start dmenu (a program launcher)
+# bindsym $mod+d exec dmenu_run
+bindsym $mod+t exec thunar &
+
+
 # change focus
 bindsym $mod+j focus left
 bindsym $mod+k focus down
@@ -132,7 +137,7 @@ set $ws9 "9"
 set $ws10 "10"
 
 # Always open some programs on specified workspace
-assign [class="termite"]               $ws1
+assign [class="alacritty"]               $ws1
 assign [class="google-chrome-stable"]  $ws2
 assign [class="virt-manager"]          $ws3
 #assign [class=""]                  $workspace8
@@ -152,6 +157,7 @@ bindsym $mod+0 workspace number $ws10
 
 bindsym $mod+Tab workspace next
 bindsym $mod+Shift+Tab workspace prev
+bindsym $mod+m move workspace to output left
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace number $ws1
@@ -198,7 +204,7 @@ mode "resize" {
 }
 
 bindsym $mod+r mode "resize"
-
+bindsym $mod+z exec i3lock 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 #bar {
@@ -207,23 +213,39 @@ bindsym $mod+r mode "resize"
 #}
 
 bar {
-	status_command i3blocks -c ~/.config/i3blocks/config
-	position top
-        font pango:mononoki Nerd Font 8 
 
-        colors {
-            background #282A36
-            statusline #F8F8F2
-            separator  #44475A
-
-            focused_workspace  #44475A #44475A #F8F8F2
-            active_workspace   #282A36 #44475A #F8F8F2
-            inactive_workspace #282A36 #282A36 #BFBFBF
-            urgent_workspace   #FF5555 #FF5555 #F8F8F2
-            binding_mode       #FF5555 #FF5555 #F8F8F2
-        }
-
+    font pango:DejaVu Sans Mono, FontAwesome 8 
+    #position top
+    status_command i3status-rs ~/.config/i3status-rust/config.toml
+    colors {
+        separator #666666
+        background #222222
+        statusline #dddddd
+        focused_workspace #0088CC #0088CC #ffffff
+        active_workspace #333333 #333333 #ffffff
+        inactive_workspace #333333 #333333 #888888
+        urgent_workspace #2f343a #900000 #ffffff
+    }
 }
+
+#bar {
+#	status_command i3blocks -c ~/.config/i3blocks/config
+#	#position top
+#        font pango:mononoki Nerd Font 8 
+#
+#        colors {
+#            background #282A36
+#            statusline #F8F8F2
+#            separator  #44475A
+#
+#            focused_workspace  #44475A #44475A #F8F8F2
+#            active_workspace   #282A36 #44475A #F8F8F2
+#            inactive_workspace #282A36 #282A36 #BFBFBF
+#            urgent_workspace   #FF5555 #FF5555 #F8F8F2
+#            binding_mode       #FF5555 #FF5555 #F8F8F2
+#        }
+#
+#}
 #configure keyboard
 exec setxkbmap -model abnt2 -layout br -variant abnt2
 
@@ -236,6 +258,8 @@ exec --no-startup-id xsetroot -solid "#3B4252"
 bindsym $mod+Prior workspace prev
 bindsym $mod+Next workspace next
 
+bindsym Control+Alt+left workspace next
+bindsym Control+Alt+right workspace prev
 
 # Screen brightness controls
 #bindsym XF86MonBrightnessUp exec "xbacklight -inc 10; notify-send 'brightness up'"
