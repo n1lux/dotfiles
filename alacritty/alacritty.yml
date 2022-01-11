@@ -1,4 +1,13 @@
+shell:
+  program: /bin/bash
+  args:
+    - -l
+    - -c
+    - "tmux"
+
+
 dynamic_title: true
+
 colors:
   # Default colors
   primary:
@@ -77,3 +86,5 @@ selection:
 
 live_config_reload: true
 
+env:
+  TERM: xterm-256color
