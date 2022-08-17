@@ -11,8 +11,8 @@
 
 set $mod Mod4
 
-set $monitor_left DVI-0
-set $monitor_middle DisplayPort-2 
+set $monitor_left DVI-I-1
+set $monitor_middle DP-3 
 set $monitor_right VGA-1-1 
 
 # Font for window titles. Will also be used by the bark unless a different font
@@ -35,7 +35,7 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
 
-set $rofi --no-startup-id  rofi -show run -lines 8 run-command "bash -i -c '{cmd}'"
+set $rofi --no-startup-id  rofi -show run -show-icons -lines 8 run-command "bash -i -c '{cmd}'"
 
 
 # Use pactl to adjust volume in PulseAudio.
@@ -67,7 +67,8 @@ bindsym $mod+Shift+q kill
 # bindsym $mod+d exec dmenu_run
 bindsym $mod+p exec $rofi 
 bindsym $mod+z exec i3lock 
-bindsym $mod+g exec "rofi -show window"
+bindsym $mod+g exec "rofi -show window -show-icons"
+bindsym $mod+d exec "rofi -modi drun -show drun -show-icons"
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -271,8 +272,7 @@ exec --no-startup-id xsetroot -solid "#3B4252"
 # PageUp & PageDown select workspace prev and next
 bindsym $mod+Prior workspace prev
 bindsym $mod+Next workspace next
-
-
+bindsym $mod+x layout toggle
 
 
 # Screen brightness controls
