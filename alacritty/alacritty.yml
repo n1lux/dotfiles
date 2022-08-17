@@ -1,57 +1,183 @@
-colors:
-  # Default colors
-  primary:
-    background: "#1e2127"
-    # background: "#2E3440"
-    foreground: "#D8DEE9"
+shell:
+  program: /bin/bash
+  args:
+    - -l
+    - -c
+    - "tmux"
 
-  # Normal colors
-  normal:
-    black: "#3B4252"
-    red: "#BF616A"
-    green: "#A3BE8C"
-    yellow: "#EBCB8B"
-    blue: "#81A1C1"
-    magenta: "#B48EAD"
-    cyan: "#88C0D0"
-    white: "#abb2bf"
+dynamic_title: true
+custom_cursor_colors: true
 
-  # Bright colors
-  bright:
-    black: "#5c6370"
-    red: "#e06c75"
-    green: "#98c379"
-    yellow: "#d19a66"
-    blue: "#61afef"
-    magenta: "#c678dd"
-    cyan: "#56b6c2"
-    white: "#ECEFF4"
+scheme:
+  kasugano: &kasugano
+    # Default colors
+    primary:
+      background: '0x1b1b1b'
+      foreground: '0xffffff'
 
-background_opacity: 1.0
+    # Normal colors
+    normal:
+      black:   '0x3d3d3d'
+      red:     '0x6673bf'
+      green:   '0x3ea290'
+      yellow:  '0xb0ead9'
+      blue:    '0x31658c'
+      magenta: '0x596196'
+      cyan:    '0x8292b2'
+      white:   '0xc8cacc'
+
+    # Bright colors
+    bright:
+      black:   '0x4d4d4d'
+      red:     '0x899aff'
+      green:   '0x52ad91'
+      yellow:  '0x98c9bb'
+      blue:    '0x477ab3'
+      magenta: '0x7882bf'
+      cyan:    '0x95a7cc'
+      white:   '0xedeff2'
+
+  ashes: &ashes
+    # Default colors
+    primary:
+      background: '0x1c2023'
+      foreground: '0xc7ccd1'
+
+    # Normal colors
+    normal:
+      black:   '0x1c2023'
+      red:     '0xc7ae95'
+      green:   '0x95c7ae'
+      yellow:  '0xaec795'
+      blue:    '0xae95c7'
+      magenta: '0xc795ae'
+      cyan:    '0x95aec7'
+      white:   '0xc7ccd1'
+
+    # Bright colors
+    bright:
+      black:   '0x747c84'
+      red:     '0xc7ae95'
+      green:   '0x95c7ae'
+      yellow:  '0xaec795'
+      blue:    '0xae95c7'
+      magenta: '0xc795ae'
+      cyan:    '0x95aec7'
+      white:   '0xf3f4f5'
+
+  google: &google
+    # Default colors
+    primary:
+      background: '0x1d1f21'
+      foreground: '0xc5c8c6'
+
+    # Normal colors
+    normal:
+      black:   '0x1d1f21'
+      red:     '0xcc342b'
+      green:   '0x198844'
+      yellow:  '0xfba922'
+      blue:    '0x3971ed'
+      magenta: '0xa36ac7'
+      cyan:    '0x3971ed'
+      white:   '0xc5c8c6'
+
+    # Bright colors
+    bright:
+      black:   '0x969896'
+      red:     '0xcc342b'
+      green:   '0x198844'
+      yellow:  '0xfba922'
+      blue:    '0x3971ed'
+      magenta: '0xa36ac7'
+      cyan:    '0x3971ed'
+      white:   '0xffffff'
+
+  ocean: &ocean
+    # Default colors
+    primary:
+      background: '0x2b303b'
+      foreground: '0xc0c5ce'
+
+    # Normal colors
+    normal:
+      black:   '0x2b303b'
+      red:     '0xbf616a'
+      green:   '0xa3be8c'
+      yellow:  '0xebcb8b'
+      blue:    '0x8fa1b3'
+      magenta: '0xb48ead'
+      cyan:    '0x96b5b4'
+      white:   '0xc0c5ce'
+
+    # Bright colors
+    bright:
+      black:   '0x65737e'
+      red:     '0xbf616a'
+      green:   '0xa3be8c'
+      yellow:  '0xebcb8b'
+      blue:    '0x8fa1b3'
+      magenta: '0xb48ead'
+      cyan:    '0x96b5b4'
+      white:   '0xeff1f5'
+  
+  atelierforestlight: &test
+    # Default colors
+    primary:
+      background: '0xf1efee'
+      foreground: '0x68615e'
+
+    # Normal colors
+    normal:
+      black:   '0x1b1918'
+      red:     '0xf22c40'
+      green:   '0x5ab738'
+      yellow:  '0xd5911a'
+      blue:    '0x407ee7'
+      magenta: '0x6666ea'
+      cyan:    '0x00ad9c'
+      white:   '0xa8a19f'
+
+    # Bright colors
+    bright:
+      black:   '0x766e6b'
+      red:     '0xf22c40'
+      green:   '0x5ab738'
+      yellow:  '0xd5911a'
+      blue:    '0x407ee7'
+      magenta: '0x6666ea'
+      cyan:    '0x00ad9c'
+      white:   '0xf1efee'
+
+
+colors: *ocean
+  
+window.opacity: 1.0
 
 font:
   normal:
-    family: "Source Code Pro"
+    family: "Liberation Mono"
     style: Regular
   bold:
-    family: "Source Code Pro"
-    style: Bold
+    family: "Liberation Mono"
+    style: Regular 
   italic:
-    family: "Source Code Pro"
+    family: "Liberation Mono"
     style: Italic
   bold_italic:
-    family: "Source Code Pro"
+    family: "Liberation Mono"
     style: Bold Italic
 
-  # Point size
-  size: 9.0
+
+# Point size
+  size: 8.5
 
   offset:
     x: 0
-    y: 0
+    y: 1
   glyph_offset:
-    x: 0
-    y: 0
+    x: 2
+    y: 2
 
 window:
   padding:
