@@ -31,7 +31,7 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
 
-set $rofi --no-startup-id  rofi -show run -lines 8 run-command "bash -i -c '{cmd}'"
+set $rofi --no-startup-id  rofi -show  run -lines 8 -show-icons run-command "bash -i -c '{cmd}'"
 
 
 # Use pactl to adjust volume in PulseAudio.
@@ -71,7 +71,7 @@ bindsym $mod+p exec $rofi
 # bindsym $mod+d exec dmenu_run
 bindsym $mod+t exec thunar &
 
-bindsym $mod+g exec "rofi -show window"
+bindsym $mod+g exec "rofi -show window -show-icons"
 
 # change focus
 bindsym $mod+j focus left
@@ -267,12 +267,14 @@ exec --no-startup-id xsetroot -solid "#3B4252"
 
 #bindsym $mod+Tab workspace next_on_output 
 #bindsym $mod+Shift+Tab workspace prev_on_output 
-# PageUp & PageDown select workspace prev and next
-bindsym $mod+Prior workspace prev
-bindsym $mod+Next workspace next
 
-bindsym Control+Alt+left workspace next
-bindsym Control+Alt+right workspace prev
+
+# Home & End  select workspace prev and next
+bindsym $mod+Home workspace prev
+bindsym $mod+End workspace next
+
+bindsym $mod+Alt+Left workspace next
+bindsym $mod+Alt+Right workspace prev
 
 # Screen brightness controls
 #bindsym XF86MonBrightnessUp exec "xbacklight -inc 10; notify-send 'brightness up'"
