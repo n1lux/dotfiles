@@ -44,10 +44,10 @@ colors:
 font:
   normal:
     family: "Liberation Mono"
-    style: Regular
+    style: Regular 
   bold:
     family: "Liberation Mono"
-    style: Regular 
+    style: Bold 
   italic:
     family: "Liberation Mono"
     style: Italic
@@ -58,17 +58,23 @@ font:
   # Point size
   size: 6.0
 
+  # Offset is the extra space around each character. `offset.y` can be thought of
+  # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
   offset:
-    x: 0
-    y: 0
+    x: 1
+    y: 1
   glyph_offset:
     x: 0
     y: 0
 
+  # Window padding (changes require restart)
+  #
+  # Blank space added around the window in pixels. This padding is scaled
+  # by DPI and the specified value is always added at both opposing sides.    
 window:
   padding:
-    x: 2
-    y: 2
+    x: 6
+    y: 6
 
 scrolling:
   # Maximum number of lines in the scrollback buffer.
@@ -90,3 +96,4 @@ live_config_reload: true
 
 env:
   TERM: xterm-256color
+  LANG: en_US.UTF-8
