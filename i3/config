@@ -259,8 +259,10 @@ bar {
         inactive_workspace #333333 #333333 #888888
         urgent_workspace #2f343a #900000 #ffffff
     }
+    bindsym button4 nop
+    bindsym button5 nop
 }
-
+focus_follows_mouse no
 #configure keyboard
 exec setxkbmap -model abnt2 -layout br -variant abnt2
 
