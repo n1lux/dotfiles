@@ -272,10 +272,12 @@ exec --no-startup-id xsetroot -solid "#3B4252"
 #bindsym $mod+Tab workspace next_on_output 
 #bindsym $mod+Shift+Tab workspace prev_on_output 
 # PageUp & PageDown select workspace prev and next
-bindsym $mod+Prior workspace prev
-bindsym $mod+Next workspace next
+bindsym $mod+Prior move workspace to output left
+bindsym $mod+Next move workspace to output right
 bindsym $mod+x layout toggle
 
+bindsym $mod+Control+Right workspace next
+bindsym $mod+Control+Left workspace prev 
 
 # Screen brightness controls
 #bindsym XF86MonBrightnessUp exec "xbacklight -inc 10; notify-send 'brightness up'"
