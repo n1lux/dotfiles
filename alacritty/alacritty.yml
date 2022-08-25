@@ -156,16 +156,16 @@ window.opacity: 1.0
 
 font:
   normal:
-    family: "Liberation Mono"
-    style: Regular
+    family: "DejaVu Sans Mono"
+    style: Regular 
   bold:
-    family: "Liberation Mono"
+    family: "DejaVu Sans Mono"
     style: Bold
   italic:
-    family: "Liberation Mono"
+    family: "DejaVu Sans Mono"
     style: Italic
   bold_italic:
-    family: "Liberation Mono"
+    family: "DejaVu Sans Mono"
     style: Bold Italic
 
 
@@ -176,8 +176,8 @@ font:
     x: 0
     y: 2
   glyph_offset:
-    x: 2
-    y: 2
+    x: 0
+    y: 0
 
 window:
   padding:
