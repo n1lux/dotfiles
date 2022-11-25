@@ -1,3 +1,3 @@
 key "Super+p" rofi --no-startup-id  rofi -show  run -lines 8 -show-icons run-command "bash -i -c '{cmd}'"
 key "Super+g" rofi -show window -show-icons
-key "Super+Enter" urxvt -e bash -c "tmux -q has-session && exec tmux attach-session -d || exec tmux new-session -n$USER -s$USER@$HOSTNAME"
+key "Super+Enter" urxvt -e bash -c "exec tmux new-session -n$USER -s$USER@$HOSTNAME"
