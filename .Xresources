@@ -1,6 +1,7 @@
 !--------------------xdefauls
 !URxvt.font: xft:ubuntu mono:pixelsize=13
 URxvt.font: xft:Terminus:size=13
+URxvt.cursorBlink: 1
 urxvt*termName: rxvt
 urxvt*scrollBar: false
 urxvt*matcher.button: 1
