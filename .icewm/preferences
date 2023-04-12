@@ -1495,3 +1495,13 @@ WorkspaceNames=" 1 ", " 2 ", " 3 ", " 4 ", " 5 ", " 6 ", " 7 ", " 8 ", " 9 ", " 
 #  Support for semitransparent terminals like Eterm or gnome-terminal.
 # SupportSemitransparency=1 # 0/1
 TaskBarAtTop=1
+
+key "Ctrl+Alt+KP_Home"  icesh -f sizeto 49% 49% top left
+key "Ctrl+Alt+KP_Up"    icesh -f sizeto 100% 49% top left
+key "Ctrl+Alt+KP_Prior" icesh -f sizeto 49% 49% top right
+key "Ctrl+Alt+KP_Right" icesh -f sizeto 49% 100% top right
+key "Ctrl+Alt+KP_Next"  icesh -f sizeto 49% 49% bottom right
+key "Ctrl+Alt+KP_Down"  icesh -f sizeto 100% 49% bottom left
+key "Ctrl+Alt+KP_End"   icesh -f sizeto 49% 49% bottom left
+key "Ctrl+Alt+KP_Left"  icesh -f sizeto 49% 100% top left
+key "Ctrl+Alt+KP_Begin" icesh -f sizeto 49% 49% center
