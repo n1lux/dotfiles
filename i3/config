@@ -54,7 +54,8 @@ floating_modifier $mod
 workspace_auto_back_and_forth yes
 
 # start a terminal
-bindsym $mod+Return exec urxvt -e bash -c "exec tmux new-session -n$USER -s$USER@$HOSTNAME:$(date +%s)"
+#bindsym $mod+Return exec urxvt -e bash -c "exec tmux new-session -n$USER -s$USER@$HOSTNAME:$(date +%s)"
+bindsym $mod+Return exec alacritty -e bash -c "exec tmux new-session -n$USER -s$USER@$HOSTNAME:$(date +%s)"
 
 
 # kill focused window
@@ -308,8 +309,8 @@ hide_edge_borders both
 for_window [class=".*"] border pixel 2
 
 # Set inner/outer gaps
-gaps inner 2
-gaps outer 2
+gaps inner 4
+gaps outer 8
 
 # Smart gaps (gaps used if only more than one container on the workspace
 smart_gaps on
