@@ -7,7 +7,6 @@ shell:
 
 
 dynamic_title: true
-draw_bold_text_with_bright_colors: true
 window.opacity: 1.0
 
 google_light: &google_light
@@ -139,20 +138,20 @@ colors: *one_dark
     
 font:
   normal:
-    family: "Liberation Mono"
+    family: "Iosevka Term"
     style: Regular
   bold:
-    family: "Liberation Mono"
+    family: "Iosevka Term"
     style: Bold 
   italic:
-    family: "Liberation Mono"
+    family: "Iosevka Term"
     style: Italic
   bold_italic:
-    family: "Liberation Mono"
+    family: "Iosevka Term"
     style: Bold Italic
 
   # Point size
-  size: 7.0
+  size: 9.0
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
@@ -170,7 +169,7 @@ font:
 window:
   padding:
     x: 4
-    y: 0
+    y: 4
 
 scrolling:
   # Maximum number of lines in the scrollback buffer.
