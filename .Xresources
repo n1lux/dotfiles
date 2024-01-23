@@ -1,9 +1,12 @@
 !--------------------xdefauls
 !URxvt.font: xft:ubuntu mono:pixelsize=13
 !URxvt.font: xft:Terminus:size=13:bold
-!URxvt.font: xft:Anonymous Pro:size=12
-URxvt.font: xft:IBM Plex Mono:size=10
+!URxvt.font: xft:Anonymous Pro:size=11
+!URxvt.font: xft:IBM Plex Mono:size=10
+!URxvt.font: xft:Iosevka Term:size=11
+URxvt.font: xft:Iosevka Term:style=Light:pixelsize=13:antialias=true:hinting=true
 URxvt.cursorBlink: 1
+
 urxvt*termName: rxvt
 urxvt*scrollBar: false
 urxvt*matcher.button: 1
