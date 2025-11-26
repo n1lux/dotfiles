@@ -27,7 +27,7 @@ syntax on
 set clipboard=unnamedplus
 set encoding=utf-8  " The encoding displayed.
 set fileencoding=utf-8  " The encoding written to file.
-
+set title 
 " Move temporary files to a secure location to protect against CVE-2017-1000382
 if exists('$XDG_CACHE_HOME')
   let &g:directory=$XDG_CACHE_HOME
@@ -53,3 +53,8 @@ if has('gui_running')
   map <S-Insert> <MiddleMouse>
   map! <S-Insert> <MiddleMouse>
 endif
+
+set tabstop=8
+set softtabstop=8
+set shiftwidth=8
+set noexpandtab
