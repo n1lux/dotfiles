@@ -1,0 +1,50 @@
+# Base16 Twilight 256 - alacritty color config
+# David Hart (https://github.com/hartbit)
+[general]
+import = [
+  "~/.config/alacritty/themes/base16-da-one-sea-256.toml"
+]
+[font]
+size = 10.0
+
+[font.bold]
+family = "Iosevka Term"
+style = "Bold"
+
+[font.bold_italic]
+family = "Iosevka Term"
+style = "Bold Italic"
+
+[font.glyph_offset]
+x = 0
+y = 0
+
+[font.italic]
+family = "Iosevka Term"
+style = "Italic"
+
+[font.normal]
+family = "Iosevka Term"
+style = "Regular"
+
+[font.offset]
+x = 0
+y = 0
+
+[scrolling]
+history = 10000
+multiplier = 10
+
+[selection]
+save_to_clipboard = true
+semantic_escape_chars = ",│`|:\"' ()[]{}<>"
+
+[terminal.shell]
+# args = ["-l", "-c"]
+program = "/bin/bash"
+
+[window.padding]
+x = 4
+y = 4
+
+[terminal]
